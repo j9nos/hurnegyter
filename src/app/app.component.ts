@@ -6,7 +6,7 @@
  * Date: 2022-01-13
  * Github: https://github.com/olahjg/
  * Licenc: GNU GPL
-*/
+ */
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 
@@ -19,7 +19,9 @@ export class AppComponent implements OnInit {
   title = 'hurnegyter';
   result: string = '...';
   hurnegyterForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder) {
+    this.#introduce();
+  }
   ngOnInit(): void {
     this.#init();
   }
@@ -38,6 +40,9 @@ export class AppComponent implements OnInit {
       this.hurnegyterForm.controls['sideC'].value,
       this.hurnegyterForm.controls['sideD'].value
     );
+  }
+  #introduce(): void {
+    console.log('Olah Janos Gergely\nSzoft N/2\n2022-01-13');
   }
   #calcArea(a: number, b: number, c: number, d: number): void {
     var s: number = this.#calcHalfArea(a, b, c, d);
