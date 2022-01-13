@@ -84,3 +84,8 @@ input[type="submit"]:hover {
 .outputContainer_ > h1 {
   border-bottom: 1px dashed white;
 }
+
+.info_ {
+  text-align: center;
+  color: white;
+}
