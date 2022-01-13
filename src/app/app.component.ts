@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.#init();
   }
-  #init() {
+  #init(): void {
     this.hurnegyterForm = this.formBuilder.group({
       sideA: new FormControl(),
       sideB: new FormControl(),
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
       sideD: new FormControl(),
     });
   }
-  onSubmit() {
+  onSubmit(): void {
     this.#calcArea(
       this.hurnegyterForm.controls['sideA'].value,
       this.hurnegyterForm.controls['sideB'].value,
